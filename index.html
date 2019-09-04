@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4, 56, 7, 8, 89]; //定义数组
+        Array.prototype.foreach = function(arr) { //将自己封装的方法绑定在array原型上
+
+            arr.reduce((prev, next) => { //用redcue循环遍历数据
+                console.log(next) //打印出next的值
+            }, arr[0])
+        }
+
+        arr.foreach(arr) //调用自己封装好的方法
+    </script>
+</body>
+
+</html>
